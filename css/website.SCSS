@@ -1,0 +1,16 @@
+
+// Well, we can retrieve all the SCSS files used on the page for you.
+
+@use "./SASS/helper/variables" ;
+@use "../css/SASS/helper/mixins" ;
+@use "./SASS/components/buttons" ;
+@use "./SASS/components/typography" ;
+@use "./SASS/sections/navbar";
+@use "./SASS/sections/intro_section" ;
+@use "./SASS/sections/campaines";
+@use "./SASS/sections/services" ;
+@use "./SASS/sections/testimonials" ;
+@use "./SASS/sections/faq" ;
+@use "./SASS/sections/portfolio" ;
+@use "./SASS/sections/get-started" ;
+@use "./SASS/sections/footer" ;

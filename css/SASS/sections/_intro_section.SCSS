@@ -1,0 +1,35 @@
+
+@use "../helper/variables" as * ;
+@use "../helper/mixins" as * ;
+
+.intro-section {
+    @include gradient;
+    padding: 5rem 0 0 0;
+    width: 100%;
+    height: 100%;
+    .intro {
+        h1 {
+            font: {
+                size: 68px;
+                weight: 700 ;
+            }
+            margin-bottom: 1rem;
+        }
+        p {
+            font: {
+                size: 23px ;
+                weight: 500;
+            }
+            padding-bottom: 15px;
+        }
+        @include TypeMedia(small) {
+            margin: auto 0 auto 0;
+            h1 {
+                font-size: 42.5px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+
+@use "./variables" as * ;
+
+// Media Queries
+
+@mixin TypeMedia($media) {
+    @if ($media == small ) {
+        @media (max-width: 991px) {
+            @content;
+        }
+    }@else if ($media == medium ) {
+        @media (min-width: 992px) and (max-width: 1199px) {
+            @content;
+        }
+    }@else if ($media == large ) {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+}
+
+
+// gradient
+@mixin gradient {
+    background: linear-gradient(to right, rgba($primary, 0.95), rgba($secondary, 0.95));
+}
+
+// absoluteCenter
+
+@mixin absoluteCenter {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+// TRANSITION PROPERTY 
+@mixin transitionProperty {
+    transition-duration: 1s;
+    transition-property: all;
+}
+
+        // soft skills --------------------------
+
+// // prefixes Mixin
+// // Auto Add prefixes To properties
+
+// @mixin prefixer($prop,$value,$prefixes: ()) {
+//     @each $prefix in $prefixes {
+//         #{'-' + $prefix + '-' + $prop}: $value ;
+//     }
+//     #{$prop}: $value ;
+// }
+
+// // Animation Mixin
+// // Auto Add Animation To properties
+
+// @mixin keyFrame($animation-name) {
+//     @-webkit-keyframes #{$animation-name} {
+//         @content ;
+//     }
+//     @keyframes #{$animation-name} {
+//         @content ;
+//     }
+// }
